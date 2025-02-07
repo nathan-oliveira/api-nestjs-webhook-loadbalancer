@@ -26,4 +26,4 @@ ENV NODE_ENV=development
 
 RUN npm install pm2 -g
 
-CMD cd /home/app/api && npm run migration:run && pm2-runtime start ecosystem.config.js && pm2 save
+CMD cd /home/app/api && pm2-runtime start ecosystem.config.js && pm2 save

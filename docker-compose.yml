@@ -8,13 +8,27 @@ services:
     networks:
       - postgres
 
+  run-migration-interview:
+    build:
+      context: .
+      dockerfile: Dockerfile.migrations
+    command: npm run migration:run
+    depends_on:
+      - db-postgres-tech-interview
+    env_file:
+      - .env
+    networks:
+      - postgres
+    restart: "no"
+
   api-tech-interview-loadbalancer:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '3777-3780:3777'
+      - "3777-3780:3777"
     depends_on:
+      - run-migration-interview
       - db-postgres-tech-interview
       - db-pgadmin-tech-interview
     env_file:
@@ -23,6 +37,7 @@ services:
       - postgres
     deploy:
       replicas: 4
+    restart: on-failure:4
 
   db-postgres-tech-interview:
     build: .docker/postgres
