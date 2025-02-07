@@ -1,0 +1,6 @@
+INSERT INTO replace_schema.webhooks (id, hook,	delivery_url, delivery_type_request, authorization_type, authorization_token, authorization_basic_username, authorization_basic_password, payload_map, active, created_at, updated_at, removed_at)
+values
+(1, 'CompaniesController.createCompany', 'http://localhost:3000/companies', 'POST', null,	null, null, null, '{"callbackUrl": "$.company.callbackUrl", "password": "$.company.password", "username": "$.company.username", "companyRef": "$.company.id"}', true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, null),
+(2, 'CompaniesController.removeCompany', 'http://localhost:3000/companies/{companyRef}', 'DELETE', null, null, null, null, null, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, null),
+(3, 'VehiclesController.createVehicle', 'http://localhost:3000/vehicles?companyRef={companyRef}', 'POST', null,	null, null, null, '{"vin": "$.vehicle.vin", "fuelLevel": "$.vehicle.fuelLevel"}', true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, null),
+(4, 'VehiclesController.removeVehicle', 'http://localhost:3000/vehicles/{vin}?companyRef={companyRef}', 'DELETE', null,	null, null, null, null, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, null)

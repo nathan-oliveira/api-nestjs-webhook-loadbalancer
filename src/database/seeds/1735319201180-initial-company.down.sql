@@ -1,0 +1,1 @@
+delete from replace_schema.companies where id = 1

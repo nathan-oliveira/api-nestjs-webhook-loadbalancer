@@ -1,0 +1,70 @@
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "3888:3888"
+    depends_on:
+      - api-tech-interview-loadbalancer
+    networks:
+      - postgres
+
+  api-tech-interview-loadbalancer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3777-3780:3777'
+    depends_on:
+      - db-postgres-tech-interview
+      - db-pgadmin-tech-interview
+    env_file:
+      - .env
+    networks:
+      - postgres
+    deploy:
+      replicas: 4
+
+  db-postgres-tech-interview:
+    build: .docker/postgres
+    container_name: db-postgres-tech-interview-container
+    image: postgres
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:-postgres}
+      POSTGRES_DB: ${DATABASE_NAME}
+      POSTGRES_DB_SCHEMA: ${DATABASE_NAME_SCHEMA}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+      - .docker/postgres/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - .docker/postgres/create-schema.sh:/docker-entrypoint-initdb.d/1_create-schema.sh
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  db-pgadmin-tech-interview:
+    container_name: db-pgadmin-tech-interview-container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

@@ -1,0 +1,16 @@
+{
+  "23505": "The record already exists in the database.",
+  "23514": "A primary key constraint violation has occurred.",
+  "23503": "A foreign key violation error occurred.",
+  "23502": "A foreign key constraint violation has occurred.",
+  "23504": "A foreign key constraint violation has occurred.",
+  "22001": "The value entered is too long for the specified data type.",
+  "22003": "The value entered is invalid for the specified data type.",
+  "42601": "Syntax error in query.",
+  "08001": "Database connection failed.",
+  "08006": "The database connection was closed unexpectedly.",
+  "28000": "Database authentication failed.",
+  "28P01": "Invalid credentials for authentication.",
+  "40001": "Transaction concurrency error.",
+  "40P01": "Transaction failed due to concurrent lock."
+}

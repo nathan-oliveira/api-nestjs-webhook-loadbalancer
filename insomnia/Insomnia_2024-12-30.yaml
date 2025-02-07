@@ -1,0 +1,906 @@
+_type: export
+__export_format: 4
+__export_date: 2024-12-30T23:48:08.590Z
+__export_source: insomnia.desktop.app:v10.3.0
+resources:
+  - _id: req_e265616dbfd64ac99610cd23b8622cad
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602078315
+    created: 1735571084317
+    url: http://localhost:3888/api/users
+    name: Find All Users
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_5d13b830baa9483086e7c7261398d18a
+        name: search
+        value: admin
+        description: ""
+        disabled: true
+      - id: pair_e03b52ff462845a58900286d11f36b64
+        name: page
+        value: "1"
+        description: ""
+        disabled: false
+      - id: pair_c17d2eafbac845029c621d75ffcc3126
+        name: limit
+        value: "10"
+        description: ""
+        disabled: false
+      - id: pair_786535b094764a43ad38b07ded3dc1fa
+        name: orderBy
+        value: '{ "column": "name", "order": "DESC" }'
+        description: ""
+        disabled: false
+      - id: pair_eafbe60b385840f2b6a3d2133c35c1af
+        name: active
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_2175f53cf6194457b4344c1ac2bf473e
+      - id: pair_c69abbb319b1417a9cb828f6be859912
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    preRequestScript: ""
+    metaSortKey: -1735571344797
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_86c269f67a5a40cf845491e62dce8b16
+    parentId: fld_d4d24a5776ab4130b28e1303b1effaa2
+    modified: 1735571121149
+    created: 1735571050763
+    name: Users
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1735303421268.5
+    environmentType: kv
+    _type: request_group
+  - _id: fld_d4d24a5776ab4130b28e1303b1effaa2
+    parentId: wrk_scratchpad
+    modified: 1735303410609
+    created: 1735303410609
+    name: TEST_ITURAN
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1735303410609
+    environmentType: kv
+    _type: request_group
+  - _id: wrk_scratchpad
+    parentId: null
+    modified: 1705850226973
+    created: 1705850226973
+    name: Scratch Pad
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_0b59b962ed774d9f927f832e949b1868
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602080698
+    created: 1735571410068
+    url: http://localhost:3888/api/users/1
+    name: Find One User
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_1e2c502a6fb74cdca724c2cc983ed037
+      - id: pair_5e76c68cdaa74b788103f7b55b5d4dd6
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735571344697
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4a50f920bb9946db80dbcfe56d400522
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602082736
+    created: 1735571433941
+    url: http://localhost:3888/api/users
+    name: Create User
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Bobby Charlton",
+        	"login": "bobby",
+        	"password": "b0bby1223",
+        	"companyId": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735571344597
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_adf86bb9f20540e7bfe6b36043d33d00
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602085113
+    created: 1735571601644
+    url: http://localhost:3888/api/users/2
+    name: Update User
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"password": "b0bby124"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735571344497
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6fe69c13a780478b97f6f7045c302bf8
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602087271
+    created: 1735571811256
+    url: http://localhost:3888/api/users/2
+    name: Enable or disable User
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735571344397
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b55fe15c3d9e41fcaf6ab27afe417715
+    parentId: fld_86c269f67a5a40cf845491e62dce8b16
+    modified: 1735602089273
+    created: 1735571849712
+    url: http://localhost:3888/api/users/2
+    name: Delete Company
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_7127cb4fe26b41a292f39322f8aa2419
+      - id: pair_7471fd89bab84ed68bb338c9d6fb5f2f
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735571344297
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f2fa6e37c5844b7ebb111c369b23c99f
+    parentId: fld_c9e062a14d604ccbb11eed0c21570e40
+    modified: 1735602091742
+    created: 1735421890105
+    url: http://localhost:3888/api/auth/signup
+    name: SignUp
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Bobby2Charlton",
+        	"login": "bobby22",
+        	"password": "b0bby12232",
+        	"companyId": 1
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.0
+    authentication: {}
+    metaSortKey: -1705851095431
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c9e062a14d604ccbb11eed0c21570e40
+    parentId: fld_d4d24a5776ab4130b28e1303b1effaa2
+    modified: 1735421895127
+    created: 1735421890103
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1735303421256
+    _type: request_group
+  - _id: req_e8978e2fe57f43eb8a4bd4be7410294d
+    parentId: fld_c9e062a14d604ccbb11eed0c21570e40
+    modified: 1735602045221
+    created: 1735421890107
+    url: http://localhost:3888/api/auth/login
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"login": "admin",
+        	"password": "admin"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_2e5a30d78e384d70ab76da0387b62d3e
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_f933257e481842e78837ef0dc8b46a17
+      - id: pair_4cf484250f484944bae9e8d5c022efde
+        name: X-Lang
+        value: pt-BR
+        description: ""
+    authentication: {}
+    preRequestScript: ""
+    metaSortKey: -1705851095381
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d4d4fd6e92f94e36bb374a52f7434804
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602096063
+    created: 1735568323265
+    url: http://localhost:3888/api/companies
+    name: Find All Companies
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_5d13b830baa9483086e7c7261398d18a
+        name: search
+        value: Ituran Mob
+        description: ""
+        disabled: true
+      - id: pair_e03b52ff462845a58900286d11f36b64
+        name: page
+        value: "1"
+        description: ""
+        disabled: false
+      - id: pair_c17d2eafbac845029c621d75ffcc3126
+        name: limit
+        value: "10"
+        description: ""
+        disabled: false
+      - id: pair_786535b094764a43ad38b07ded3dc1fa
+        name: orderBy
+        value: '{ "column": "name", "order": "DESC" }'
+        description: ""
+        disabled: false
+      - id: pair_eafbe60b385840f2b6a3d2133c35c1af
+        name: active
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_2175f53cf6194457b4344c1ac2bf473e
+      - id: pair_c69abbb319b1417a9cb828f6be859912
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTg0NTEzLCJleHAiOjE3MzU2Mjc3MTN9.5aws9I-U4lkc-_HG7vXPjMRPFIxDk3DqVX5ahpU1_C4
+      disabled: false
+    preRequestScript: ""
+    metaSortKey: -1735422405695
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_97f90be009be4a12964e39171c2e37ed
+    parentId: fld_d4d24a5776ab4130b28e1303b1effaa2
+    modified: 1735421902631
+    created: 1735419422305
+    name: Companies
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1735303421206
+    environmentType: kv
+    _type: request_group
+  - _id: req_507daaa730a74838a6b5ae156f81251d
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602098024
+    created: 1735569533132
+    url: http://localhost:3888/api/companies/1
+    name: Find One Company
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_1e2c502a6fb74cdca724c2cc983ed037
+      - id: pair_5e76c68cdaa74b788103f7b55b5d4dd6
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422405645
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0ea31c550b8f40ddb2e1620eda253de1
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602100553
+    created: 1735422405595
+    url: http://localhost:3888/api/companies
+    name: Create Company
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+        	"name": "Ituran Mob",
+        	"address": "Rua exemplo, 123, Bairro, CEP 98765-432, São Paulo, SP, Brasil",
+        	"phone": "+55 11 99999-9999"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422405595
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_4f1d8b8df2f74c269331d619d4bf1f33
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602104227
+    created: 1735569605334
+    url: http://localhost:3888/api/companies/1
+    name: Update Company
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Ituran Mob"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422035091.625
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c6b32dc6c91441dbae1be74fc30d16a5
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602106371
+    created: 1735571144448
+    url: http://localhost:3888/api/companies/2
+    name: Enable or disable Company
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735421849839.9375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_42dded90608849c0a0561e496cb75fc1
+    parentId: fld_97f90be009be4a12964e39171c2e37ed
+    modified: 1735602108428
+    created: 1735496579391
+    url: http://localhost:3888/api/companies/8
+    name: Delete Company
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_7127cb4fe26b41a292f39322f8aa2419
+      - id: pair_7471fd89bab84ed68bb338c9d6fb5f2f
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735421664588.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6ca09fd6fa5d4b5ba71d48ca075dc360
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602072013
+    created: 1735571916132
+    url: http://localhost:3888/api/vehicles
+    name: Find All Vehicles
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_5d13b830baa9483086e7c7261398d18a
+        name: search
+        value: 1HGCM82633A123456
+        description: ""
+        disabled: true
+      - id: pair_e03b52ff462845a58900286d11f36b64
+        name: page
+        value: "1"
+        description: ""
+        disabled: false
+      - id: pair_c17d2eafbac845029c621d75ffcc3126
+        name: limit
+        value: "10"
+        description: ""
+        disabled: false
+      - id: pair_786535b094764a43ad38b07ded3dc1fa
+        name: orderBy
+        value: '{ "column": "createdAt", "order": "DESC" }'
+        description: ""
+        disabled: false
+      - id: pair_eafbe60b385840f2b6a3d2133c35c1af
+        name: active
+        value: "true"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_2175f53cf6194457b4344c1ac2bf473e
+      - id: pair_c69abbb319b1417a9cb828f6be859912
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NjAyMDQ3LCJleHAiOjE3MzU2NDUyNDd9.7H-FrTMc1vvpujZyeQeYKSNipgJ2M-syL1OXxL4Ewuc
+    preRequestScript: ""
+    metaSortKey: -1735422405695
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    parentId: fld_d4d24a5776ab4130b28e1303b1effaa2
+    modified: 1735571916130
+    created: 1735571916130
+    name: Vehicles
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1735303415907.5
+    environmentType: kv
+    _type: request_group
+  - _id: req_bd8af94d87214271a2279a2ad40fbf9e
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602113586
+    created: 1735571916133
+    url: http://localhost:3888/api/vehicles/1
+    name: Find One Vehicle
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.0
+        id: pair_1e2c502a6fb74cdca724c2cc983ed037
+      - id: pair_5e76c68cdaa74b788103f7b55b5d4dd6
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422405645
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_264b9696bdd446099c4a7c92ce70ad2b
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602115543
+    created: 1735571916131
+    url: http://localhost:3888/api/vehicles
+    name: Create Vehicle
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"license": "AB1234567CD",
+        	"vin": "1HGCM82633A123461",
+        	"companyId": "2"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422405595
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_53086de85d1a471fbb1f05a4e4179ca6
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602117684
+    created: 1735571916134
+    url: http://localhost:3888/api/vehicles/1
+    name: Update Vehicle
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"license": "AB1234567CD"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_60522fee6f404610b7ed1ab1edbe77f5
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735422035091.625
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8bf7515e7e3b49529ffd86d57bc99eb7
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602120132
+    created: 1735571916135
+    url: http://localhost:3888/api/vehicles/1
+    name: Enable or disable Vehicle
+    description: ""
+    method: PATCH
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_776597aa7c3d4e27887ba74b67dad7cd
+      - id: pair_890b37a8eb164588992f626db389fdc4
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735421849839.9375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e48d8fe0846b45c29c221ff582592b8c
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602123249
+    created: 1735571916131
+    url: http://localhost:3888/api/vehicles/5
+    name: Delete Vehicle
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.0
+        id: pair_7127cb4fe26b41a292f39322f8aa2419
+      - id: pair_7471fd89bab84ed68bb338c9d6fb5f2f
+        name: x-lang
+        value: en-US
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJ1bGUiOjIsImFjdGl2ZSI6dHJ1ZSwiaWF0IjoxNzM1NTYzMjIyLCJleHAiOjE3MzU2MDY0MjJ9.52nRZB0il51wij8jUMsc7SvtZSZh2ayTHKR8K2Ej8bE
+    metaSortKey: -1735421664588.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ccef876bd594421d95c74bed35aee9c5
+    parentId: fld_f397170cdc8b4e9d919a63f1dbaf7a02
+    modified: 1735602127249
+    created: 1735303416960
+    url: http://localhost:3888/api/vehicles/callback
+    name: Callback (Auth Basic)
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"vin": "1HGCM82633A123456",
+        	"latitude": "-23.507399",
+        	"longitude": "-46.83815"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.0
+    authentication:
+      type: basic
+      useISO88591: false
+      disabled: false
+      username: admin
+      password: admin
+    metaSortKey: -1735421664488.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    parentId: wrk_scratchpad
+    modified: 1705850528797
+    created: 1705850528797
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1705850528797
+    _type: environment
+  - _id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    parentId: wrk_scratchpad
+    modified: 1705850528894
+    created: 1705850528894
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar

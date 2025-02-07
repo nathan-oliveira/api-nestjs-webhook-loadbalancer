@@ -1,0 +1,1 @@
+delete from replace_schema.webhooks where id = 1 or id = 2 or id = 3 or id = 4

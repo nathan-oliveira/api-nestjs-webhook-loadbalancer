@@ -1,0 +1,1 @@
+INSERT INTO replace_schema.companies (id, name, address, phone) VALUES (1, 'Ituran Mob', 'Rua Verbo Divino, 1601 - Andar 6 Sala 1 - Chacara Santo Antonio (Zona Sul) - São Paulo/SP - 04719-912', '+55 14 99726-5072')
