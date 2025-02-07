@@ -4,9 +4,9 @@ module.exports = {
   apps: [
     {
       script: '/home/app/api/src/main.js',
-      instances: 'max',
+      instances: '1',
       name: 'api-tech-interview-loadbalancer',
-      exec_mode: 'cluster',
+      exec_mode: 'fork',
       node_args: '--max_old_space_size=2048',
       log_date_format: 'YYYY-MM-DD HH:mm:ss',
       env: {
